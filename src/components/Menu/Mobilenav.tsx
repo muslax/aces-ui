@@ -39,6 +39,7 @@ export default function Mobilenav({ links }: { links: LinkProps[] }) {
                   key={link.href}
                   component={NextLink}
                   href={link.href}
+                  style={{ fontSize: 14.5, fontWeight: 500 }}
                 >
                   {link.label}
                 </Menu.Item>
@@ -81,24 +82,20 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    fontSize: 13.25,
-    // fontWeight: 500,
   },
 
   item: {
-    position: "relative",
-    // display: 'inline-block',
     display: "block",
+    position: "relative",
     padding: "0 12px",
-    fontSize: 13.5,
-    // fontWeight: 500,
+    fontWeight: 500,
     lineHeight: "50px",
-    color: theme.colors.gray[7],
+    color: theme.colors.gray[8],
     textDecoration: "none",
     cursor: "pointer",
 
     ":hover": {
-      color: theme.colors.violet[6],
+      color: theme.colors.violet[5],
     },
 
     ":before": {
@@ -109,16 +106,13 @@ const useStyles = createStyles((theme) => ({
       left: 12,
       right: 12,
       bottom: 0,
-      borderBottomWidth: 3,
-      borderBottomStyle: "solid",
-      borderBottomColor: "transparent",
     },
   },
 
   active: {
     color: theme.colors.gray[8],
     ":before": {
-      borderBottomColor: "#345",
+      borderBottom: "3px solid #345",
     },
     ":hover": {
       color: theme.colors.gray[8],
