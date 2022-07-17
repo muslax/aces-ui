@@ -1,12 +1,12 @@
-import { createStyles } from '@mantine/core';
+import { createStyles } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   container: {
     maxWidth: 1024,
     paddingLeft: 16,
     paddingRight: 16,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    '@media (min-width: 768px)': {
+    marginLeft: "auto",
+    marginRight: "auto",
+    "@media (min-width: 768px)": {
       paddingLeft: 24,
       paddingRight: 24,
     },
@@ -18,37 +18,37 @@ export const useStyles = createStyles((theme) => ({
     paddingBottom: 15,
     backgroundColor: theme.white,
     borderBottom: `1px solid ${theme.colors.gray[2]}`,
-    '@media (min-width: 768px)': {
-      position: 'fixed',
+    "@media (min-width: 768px)": {
+      position: "fixed",
       zIndex: 99,
       top: 0,
       left: 0,
       right: 0,
-      borderBottomColor: 'transparent',
+      borderBottomColor: "transparent",
     },
   },
 
   headerScrolled: {
-    '@media (min-width: 768px)': {
+    "@media (min-width: 768px)": {
       borderBottom: `1px solid ${theme.colors.gray[3]}`,
-      boxShadow: '0 0 3px rgba(100,100,100,.15)',
+      boxShadow: "0 0 3px rgba(100,100,100,.15)",
     },
   },
 
   nav: {
     height: 50,
-    padding: '0 16px',
+    padding: "0 16px",
     backgroundColor: theme.white,
-    borderBottom: '1px solid transparent',
-    '@media (min-width: 768px)': {
-      display: 'none',
+    borderBottom: "1px solid transparent",
+    "@media (min-width: 768px)": {
+      display: "none",
       // position: 'fixed',
       // top: -200,
     },
   },
 
   navFixed: {
-    position: 'fixed',
+    position: "fixed",
     zIndex: 99,
     top: 0,
     left: 0,
@@ -57,43 +57,43 @@ export const useStyles = createStyles((theme) => ({
 
   navScrolled: {
     borderBottom: `1px solid ${theme.colors.gray[3]}`,
-    boxShadow: '0 0 3px rgba(100,100,100,.15)',
+    boxShadow: "0 0 3px rgba(100,100,100,.15)",
   },
 
   heroWrap: {
-    '@media (min-width: 768px)': {
+    "@media (min-width: 768px)": {
       marginTop: 70,
     },
   },
 
   heroScrolled: {
-    '@media (max-width: 767px)': {
+    "@media (max-width: 767px)": {
       marginTop: 50,
     },
   },
 
   wrapper: {
-    position: 'relative',
+    position: "relative",
     maxWidth: 900,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 
   pageWrap: {
-    display: 'flex',
-    alignItems: 'start',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "start",
+    justifyContent: "center",
     paddingTop: 40,
     paddingBottom: 80,
   },
 
   sidebar: {
-    display: 'none',
-    '@media (min-width: 768px)': {
-      position: 'sticky',
+    display: "none",
+    "@media (min-width: 768px)": {
+      position: "sticky",
       top: 100,
-      display: 'block',
-      width: '23.5%',
+      display: "block",
+      width: "23.5%",
       minWidth: 175,
       maxWidth: 200,
       paddingRight: 45,
@@ -104,21 +104,22 @@ export const useStyles = createStyles((theme) => ({
   mainWrap: {
     flexGrow: 1,
     maxWidth: 620,
-    '@media (min-width: 768px)': {
+    "@media (min-width: 768px)": {
+      width: "76.5%",
       maxWidth: 720,
     },
   },
 
   gotoTop: {
-    display: 'none',
+    display: "none",
   },
 
   gotoTopVisible: {
-    display: 'block',
-    position: 'fixed',
+    display: "block",
+    position: "fixed",
     bottom: 20,
     right: 20,
     width: 50,
-    backgroundColor: 'silver',
+    backgroundColor: "silver",
   },
 }));

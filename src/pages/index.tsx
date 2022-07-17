@@ -1,6 +1,7 @@
 import { useForm } from "@mantine/form";
 import Layout, { PageSpec } from "components/Layout/Layout";
 import { Text, useMantineTheme } from "@mantine/core";
+import TextFiller from "components/Filler/TextFiller";
 import Block from "components/Block/Block";
 import { AcesMenu } from "components/Menu/Menu";
 import Frame from "components/Frame/Frame";
@@ -8,8 +9,8 @@ import { useState } from "react";
 
 const pageSpec: PageSpec = {
   menu: AcesMenu,
-  type: "Recruitment",
-  title: "Overview",
+  type: "Aces",
+  title: "Home",
 };
 
 export default function Index() {
@@ -25,10 +26,10 @@ export default function Index() {
 
   return (
     <Layout spec={pageSpec}>
-      <Filler s="xs" />
-      <Filler s="sm" />
-      <Filler s="md" />
-      <Filler s="lg" />
+      <TextFiller s="xs" />
+      <TextFiller s="sm" />
+      <TextFiller s="md" />
+      <TextFiller s="lg" />
 
       <Frame
         shadow
@@ -127,15 +128,5 @@ export default function Index() {
         KOLSO
       </Frame> */}
     </Layout>
-  );
-}
-
-function Filler({ s }: { s: "xs" | "sm" | "md" | "lg" | "xl" }) {
-  return (
-    <Text mb={20} size={s}>
-      {s.toUpperCase()} - This problem is occurred when you have tried to
-      rehydrate you react app. Generated react app rehydrate with generated
-      markup at that time it show empty space between jsx tags.
-    </Text>
   );
 }

@@ -11,6 +11,11 @@ export type MenuType = "default" | "recruitment";
 
 export const AcesMenu: LinkProps[] = [
   {
+    href: "/ui",
+    label: "UI-UX",
+    icon: <Aperture size={18} />,
+  },
+  {
     href: "/projects",
     label: "Projects",
     icon: <Aperture size={18} />,
