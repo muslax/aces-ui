@@ -1,6 +1,6 @@
 import { Dispatch } from "react";
 import { Checkbox, Text } from "@mantine/core";
-import { AcesModule } from "lib/aces-modules";
+import { AcesModule } from "lib/project-modules";
 import { useStyles } from "./ModuleItem.styles";
 
 export interface ModuleItemProps {

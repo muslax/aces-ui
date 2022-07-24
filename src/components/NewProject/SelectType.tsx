@@ -1,20 +1,33 @@
-import { Button, Divider, SimpleGrid, Text, Title } from "@mantine/core";
-import { ProjectType } from "lib/aces-modules";
+import { Button, SimpleGrid, Text, Title } from "@mantine/core";
+import { ProductType } from "lib/product-types";
+import {
+  AssessmentProduct,
+  CompetenceProduct,
+  PotrevProduct,
+  RecruitmentProduct,
+} from "lib/product-types";
 import Link from "next/link";
 import { Dispatch } from "react";
 import { useStyles } from "./NewProject.styles";
-import NewProjectItem from "./NewProjectItem";
+import Product from "./Product";
 
 interface SelectTypeProps {
   width: number;
-  projectType: ProjectType | "";
-  setProjectType: Dispatch<ProjectType | "">;
+  projectType: ProductType | "";
+  setProjectType: Dispatch<ProductType | "">;
   next: () => void;
 }
 
 export default function SelectType(props: SelectTypeProps) {
   const { classes, cx } = useStyles({});
   const width = props.width;
+
+  const products = [
+    AssessmentProduct,
+    CompetenceProduct,
+    RecruitmentProduct,
+    PotrevProduct,
+  ];
 
   return (
     <>
@@ -26,64 +39,15 @@ export default function SelectType(props: SelectTypeProps) {
         Lanjut pada bagian bawah.
       </Text>
 
-      <SimpleGrid cols={width > 0 && width < 600 ? 1 : 2} my={20}>
-        <NewProjectItem
-          type="assessment"
-          title="Assessment Center"
-          projectType={props.projectType}
-          setProjectType={props.setProjectType}
-          collapse={width > 0 && width < 500}
-        >
-          <Text size="sm">
-            Each column takes <strong>equal amount</strong> of space and unlike
-            Grid component you do not control column span, instead you specify
-            number of columns per row. Each column takes space and unlike Grid
-            component you do not control column span, instead you specify number
-            of columns per row.
-          </Text>
-        </NewProjectItem>
-
-        <NewProjectItem
-          type="competence"
-          title="Competence @ Work"
-          projectType={props.projectType}
-          setProjectType={props.setProjectType}
-          collapse={width > 0 && width < 500}
-        >
-          <Text size="sm">
-            Each column takes <strong>equal amount</strong> of space and unlike
-            Grid component you do not control column span, instead you specify
-            number of columns per row.
-          </Text>
-        </NewProjectItem>
-
-        <NewProjectItem
-          type="recruitment"
-          title="Recruitment"
-          projectType={props.projectType}
-          setProjectType={props.setProjectType}
-          collapse={width > 0 && width < 500}
-        >
-          <Text size="sm">
-            Each column takes <strong>equal amount</strong> of space and unlike
-            Grid component you do not control column span, instead you specify
-            number of columns per row.
-          </Text>
-        </NewProjectItem>
-
-        <NewProjectItem
-          type="potrev"
-          title="Potential Review"
-          projectType={props.projectType}
-          setProjectType={props.setProjectType}
-          collapse={width > 0 && width < 500}
-        >
-          <Text size="sm">
-            Each column takes <strong>equal amount</strong> of space and unlike
-            Grid component you do not control column span, instead you specify
-            number of columns per row.
-          </Text>
-        </NewProjectItem>
+      <SimpleGrid cols={width > 0 && width < 640 ? 1 : 2} my={20}>
+        {products.map((descriptor) => (
+          <Product
+            key={descriptor.type}
+            descriptor={descriptor}
+            projectType={props.projectType}
+            setProjectType={props.setProjectType}
+          />
+        ))}
       </SimpleGrid>
 
       <div className={classes.confirmBox}>

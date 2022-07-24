@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
+import { ProductType } from "./product-types";
 import {
   AcesModule,
-  ProjectType,
   potrevModules,
   assessmentModules,
   competenceModules,
   recruitmentModules,
-} from "./aces-modules";
+} from "./project-modules";
 
 export interface ProjectTemplate {
   title: string;
@@ -20,9 +20,9 @@ export interface ProjectTemplate {
 }
 
 export function getProjectTemplate(
-  projectType: ProjectType | ""
+  productType: ProductType | ""
 ): ProjectTemplate {
-  switch (projectType) {
+  switch (productType) {
     case "potrev":
       return potrevTemplate;
     case "recruitment":
@@ -55,7 +55,7 @@ const potrevTemplate: ProjectTemplate = {
     </div>
   ),
   defaultTitle: "Modul Utama",
-  defaultDescription: "",
+  defaultDescription: "Petunjuk/keterangan tentant modul utama",
   optionalTitle: "Modul Pilihan",
   optionalDescription: "Petunjuk/keterangan tentant modul pilihan",
   modules: potrevModules,
@@ -72,7 +72,7 @@ const recruitmentTemplate: ProjectTemplate = {
     </div>
   ),
   defaultTitle: "Modul Utama",
-  defaultDescription: "",
+  defaultDescription: "Petunjuk/keterangan tentant modul utama",
   optionalTitle: "Modul Pilihan",
   optionalDescription: "Petunjuk/keterangan tentant modul pilihan",
   modules: recruitmentModules,
@@ -89,7 +89,11 @@ const competenceTemplate: ProjectTemplate = {
     </div>
   ),
   defaultTitle: "Modul Utama",
-  defaultDescription: "",
+  defaultDescription: (
+    <>
+      Petunjuk/keterangan <strong>tentang</strong> modul utama
+    </>
+  ),
   optionalTitle: "Modul Pilihan",
   optionalDescription: "Petunjuk/keterangan tentant modul pilihan",
   modules: competenceModules,

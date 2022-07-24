@@ -8,7 +8,8 @@ import { useStyles } from "./NewProject.styles";
 import SelectModules from "./SelectModules";
 import Show from "components/show/Show";
 import SetInfo from "./SetInfo";
-import { AcesModule, ProjectType } from "lib/aces-modules";
+import { ProductType } from "lib/product-types";
+import { AcesModule } from "lib/project-modules";
 import Pojo from "components/Pojo";
 
 export default function NewProject() {
@@ -19,7 +20,7 @@ export default function NewProject() {
   const headerClasses = cx(layout.headerWrap);
 
   const [step, setStep] = useState(1);
-  const [projectType, setProjectType] = useState<ProjectType | "">("");
+  const [projectType, setProjectType] = useState<ProductType | "">("");
   const [modules, setModules] = useState<AcesModule[]>([]);
 
   return (

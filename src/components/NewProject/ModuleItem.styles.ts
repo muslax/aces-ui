@@ -51,7 +51,7 @@ export const useStyles = createStyles((theme, props: Props) => ({
   },
 
   description: {
-    fontSize: 13,
+    // fontSize: 13.5,
     maxWidth: props.textWidth || 600,
     color: props.disabled ? theme.colors.gray[6] : "",
   },

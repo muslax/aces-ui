@@ -1,14 +1,9 @@
 import { ReactNode } from "react";
-
-export type ProjectType =
-  | "potrev"
-  | "recruitment"
-  | "competence"
-  | "assessment";
+import { ProductType } from "./product-types";
 
 export interface AcesModule {
   id: string;
-  group: ProjectType;
+  group: ProductType;
   name: string;
   description: string | ReactNode;
   tools: string[];

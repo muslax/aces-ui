@@ -1,13 +1,14 @@
 import { Dispatch, useEffect } from "react";
-import { Button, Text, Title } from "@mantine/core";
+import { Button, Text, Title, useMantineTheme } from "@mantine/core";
 import Frame from "components/Frame/Frame";
-import { AcesModule, ProjectType } from "lib/aces-modules";
+import { ProductType } from "lib/product-types";
+import { AcesModule } from "lib/project-modules";
 import { getProjectTemplate } from "lib/project-templates";
 import ModuleItem from "./ModuleItem";
 import { useStyles } from "./NewProject.styles";
 
 interface SelectModulesProps {
-  type: ProjectType | "";
+  type: ProductType | "";
   modules: AcesModule[];
   setModules: Dispatch<AcesModule[]>;
   back: () => void;
@@ -15,6 +16,7 @@ interface SelectModulesProps {
 }
 
 export default function SelectModules(props: SelectModulesProps) {
+  const theme = useMantineTheme();
   const { classes, cx } = useStyles({});
   const template = getProjectTemplate(props.type);
   const defaultModules = template?.modules.filter((m) => !m.optional);
@@ -42,8 +44,8 @@ export default function SelectModules(props: SelectModulesProps) {
       >
         {defaultModules.length > 0 && (
           <div style={{ marginBottom: 20 }}>
-            <Text weight={600}>{template.defaultTitle}</Text>
-            <Text size="sm" mb={10} color="gray">
+            <Text weight={700}>{template.defaultTitle}</Text>
+            <Text mb={10} color={theme.colors.gray[7]}>
               {template.defaultDescription}
             </Text>
             {defaultModules.map((modul) => (
@@ -57,10 +59,10 @@ export default function SelectModules(props: SelectModulesProps) {
           </div>
         )}
         <div>
-          <Text weight={600} mt={0}>
+          <Text weight={700} mt={0}>
             {template.optionalTitle}
           </Text>
-          <Text size="sm" mb={10} color="gray">
+          <Text mb={10} color={theme.colors.gray[7]}>
             {template.optionalDescription}
           </Text>
           {template.modules
@@ -82,7 +84,12 @@ export default function SelectModules(props: SelectModulesProps) {
             Back
           </Button>
         </div>
-        <Button color="dark" size="md" onClick={props.next}>
+        <Button
+          color="dark"
+          size="md"
+          disabled={props.modules.length < template.minimum}
+          onClick={props.next}
+        >
           Lanjut
         </Button>
       </div>
