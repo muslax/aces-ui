@@ -1,5 +1,6 @@
 import { Button, createStyles } from "@mantine/core";
 import { useStyles as layoutStyles } from "components/Layout/Layout.styles";
+import Link from "next/link";
 
 export default function Hero({
   type,
@@ -28,9 +29,11 @@ export default function Hero({
                   </div>
                 </div>
                 <div className={classes.right}>
-                  <Button size="md" color="dark">
-                    New Project
-                  </Button>
+                  <Link href="/new">
+                    <Button component="a" size="md" color="dark">
+                      New Project
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -59,7 +59,7 @@ export default function NewProject() {
               />
             </Show>
 
-            <Pojo object={modules} />
+            {/* <Pojo object={modules} /> */}
           </div>
         </div>
       </div>

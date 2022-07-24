@@ -1,5 +1,6 @@
 import { Button, Divider, SimpleGrid, Text, Title } from "@mantine/core";
 import { ProjectType } from "lib/aces-modules";
+import Link from "next/link";
 import { Dispatch } from "react";
 import { useStyles } from "./NewProject.styles";
 import NewProjectItem from "./NewProjectItem";
@@ -86,7 +87,13 @@ export default function SelectType(props: SelectTypeProps) {
       </SimpleGrid>
 
       <div className={classes.confirmBox}>
-        <div className={classes.confirmLeft}>AAA</div>
+        <div className={classes.confirmLeft}>
+          <Link href="/projects">
+            <Button component="a" color="dark" variant="outline" size="md">
+              Cancel
+            </Button>
+          </Link>
+        </div>
         <Button
           color="dark"
           size="md"
