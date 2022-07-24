@@ -113,20 +113,6 @@ export default function Index() {
         Generated react app rehydrate with generated markup at that time it show
         empty space between jsx tags.
       </Block>
-
-      {/* <SimpleFrame mt={20} p="10px 15px" withShadow>
-        SimpleFrame
-      </SimpleFrame>
-
-      <Frame
-        mt={20}
-        contrast
-        title="Frame"
-        p="10px 15px"
-        description="Frame description"
-      >
-        KOLSO
-      </Frame> */}
     </Layout>
   );
 }

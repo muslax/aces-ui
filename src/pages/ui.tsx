@@ -9,14 +9,14 @@ import PTabs from "components/Tabs/PTabs";
 import Typography from "components/UI/Typography";
 import Frames from "components/UI/Frames";
 
-const pageSpec: PageSpec = {
-  menu: AcesMenu,
-  type: "Aces",
-  title: "User Interfaces",
-};
-
 export default function Index() {
   const theme = useMantineTheme();
+  const pageSpec: PageSpec = {
+    menu: AcesMenu,
+    type: "Aces",
+    title: "User Interfaces",
+    heroColor: theme.colors.violet[0],
+  };
   const form = useForm({
     initialValues: {
       nama: "Joko",

@@ -10,6 +10,7 @@ import { useStyles } from "./Layout.styles";
 export interface PageSpec {
   type: string;
   title: string;
+  heroColor?: string;
   menu: LinkProps[];
 }
 
@@ -39,17 +40,17 @@ export default function Layout({
         <Header />
       </div>
 
-      <div className={navClasses}>
+      <div id="layout-mobile-nav" className={navClasses}>
         <Mobilenav links={spec.menu} />
       </div>
 
-      <div className={heroClasses}>
-        <Hero type={spec.type} title={spec.title} />
+      <div id="layout-hero" className={heroClasses}>
+        <Hero type={spec.type} title={spec.title} color={spec.heroColor} />
       </div>
 
-      <div className={classes.container}>
-        <div className={classes.wrapper}>
-          <div className={classes.pageWrap}>
+      <div id="layout-container" className={classes.container}>
+        <div id="layout-wrapper" className={classes.wrapper}>
+          <div id="layout-page-wrap" className={classes.pageWrap}>
             <div id="sidebar" className={classes.sidebar}>
               <div style={{ backgroundColor: "white" }}>
                 <Sidebar links={spec.menu} />
