@@ -1,5 +1,5 @@
-import NewProject from "components/NewProject/NewProject";
+import CreateProject from "components/create-project/CreateProject";
 
 export default function NewProjectPage() {
-  return <NewProject />;
+  return <CreateProject />;
 }

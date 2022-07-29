@@ -26,7 +26,7 @@ export default function SelectModules(props: SelectModulesProps) {
       props.setModules(defaultModules);
     }
     return () => {};
-  }, []);
+  }, [props, defaultModules]);
 
   return (
     <>

@@ -1,0 +1,216 @@
+{
+  "products": [
+    {
+      "type": "assessment",
+      "title": "Assessment Center (LOCAL)",
+      "description": "Paket pengukuran kompetensi yang memenuhi kaidah-kaidah <strong>Assessment Center</strong> internasional, terdiri dari dua modul utama plus dua hingga lima pilihan. Anda dapat menentukan modul pilihan apa saja setelah mengklik tombol Lanjut pada bagian bawah.",
+      "selectionGuide": "Silakan memilih sesuai selera...",
+      "minimumModules": 4,
+      "groups": [
+        {
+          "title": "Modul Utama",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": true,
+          "modules": ["C_RATE", "GPQ"]
+        },
+        {
+          "title": "Simulasi Mandiri",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["INTRAY", "CAN"]
+        },
+        {
+          "title": "Simulasi Interaktif",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["BEI", "LGD", "ROLEPLAY", "PRESENTATION"]
+        }
+      ]
+    },
+    {
+      "type": "competence",
+      "title": "Comptence @ Work (LOCAL)",
+      "description": "Maksimum 4 baris atau sekitar 165 karakter Pengukuran kompetensi yang memenuhi kaidah-kaidah Assessment Center. Terdiri dari dua modul utama plus dua hingga lima pilihan.",
+      "selectionGuide": "Silakan memilih sesuai selera...",
+      "minimumModules": 2,
+      "groups": [
+        {
+          "title": "Modul Utama",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": true,
+          "modules": ["G_MATE", "GPQ"]
+        },
+        {
+          "title": "Simulasi Mandiri",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["INTRAY", "CAN"]
+        },
+        {
+          "title": "Simulasi Interaktif",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["BEI", "LGD", "ROLEPLAY", "PRESENTATION"]
+        }
+      ]
+    },
+    {
+      "type": "recruitment",
+      "title": "Recruitment (LOCAL)",
+      "description": "Paket pengukuran kompetensi yang memenuhi kaidah-kaidah <strong>Assessment Center</strong> internasional, terdiri dari dua modul utama plus dua hingga lima pilihan. Anda dapat menentukan modul pilihan apa saja setelah mengklik tombol Lanjut pada bagian bawah.",
+      "selectionGuide": "Silakan memilih sesuai selera...",
+      "minimumModules": 2,
+      "groups": [
+        {
+          "title": "Modul Utama",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": true,
+          "modules": ["G_GATE", "GPQ"]
+        },
+        {
+          "title": "Modul Pilihan",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["BEI", "LGD"]
+        }
+      ]
+    },
+    {
+      "type": "potrev",
+      "title": "Potential Review (LOCAL)",
+      "description": "Paket pengukuran kompetensi yang memenuhi kaidah-kaidah <strong>Assessment Center</strong> internasional, terdiri dari dua modul utama plus dua hingga lima pilihan. Anda dapat menentukan modul pilihan apa saja setelah mengklik tombol Lanjut pada bagian bawah.",
+      "selectionGuide": "Silakan memilih sesuai selera...",
+      "minimumModules": 1,
+      "groups": [
+        {
+          "title": "Personality @ Work",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["GPQ"]
+        },
+        {
+          "title": "Emotional Management",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": ["AIME", "CSI"]
+        },
+        {
+          "title": "Professional Leadership",
+          "description": "Keterangan atau petunjuk singkat tentang kelompok modul ini.",
+          "required": false,
+          "modules": [
+            "LEADERSHIP",
+            "MANAGEMENT_ACTION",
+            "DECISION_MAKING",
+            "EMPOWERMENT",
+            "I360"
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "AIME",
+      "name": "AIME - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "CSI",
+      "name": "CSI - Cara Saring Inti",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "LEADERSHIP",
+      "name": "Leadership - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "MANAGEMENT_ACTION",
+      "name": "Management Action - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "DECISION_MAKING",
+      "name": "Decision Making - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "EMPOWERMENT",
+      "name": "Empowerment - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "I360",
+      "name": "Modul 360 - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "GPQ",
+      "name": "GPQ - Gaia Personability Questionnaire",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "G_GATE",
+      "name": "G-GATE - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "G_MATE",
+      "name": "G-MATE - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "C_RATE",
+      "name": "C-RATE - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "INTRAY",
+      "name": "Intray - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": "CAN"
+    },
+    {
+      "id": "CAN",
+      "name": "Case Analysis - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": "INTRAY"
+    },
+    {
+      "id": "BEI",
+      "name": "Wawancara - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "LGD",
+      "name": "LGD - Leaderless Group Discussion",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "ROLEPLAY",
+      "name": "Roleplay - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    },
+    {
+      "id": "PRESENTATION",
+      "name": "Presentation - Aku Ini Memang Enjoy",
+      "description": "Definisi atau keterangan singkat tentang modul ini...",
+      "conflictWith": ""
+    }
+  ]
+}

@@ -21,7 +21,7 @@ export default function Mobilenav({ links }: { links: LinkProps[] }) {
     });
     setShadowLinks(rs);
     return () => {};
-  }, [width]);
+  }, [width, links]);
 
   return (
     <div ref={ref} id="mobilenav">
